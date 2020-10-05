@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>GitHub Preview Favelet</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<h1>Resolutions Favelet</h1>
+		<p>This is a "favelet" to generate a rendered preview of content in a GitHub repository. To install it, use the context menu or drag the following link to your bookmarks toolbar or menu. When viewing a file in GitHub, activate this favelet to the rendered preview.</p>
+		<p><a href="javascript:var resolutions = document.querySelector('#ResolutionSummary').parentNode.nextElementSibling.getElementsByTagName('a'); if (!resolutions.length > 0) alert ('No resolutions found in these minutes.');  var pathArray = window.location.pathname.split(new RegExp('[/-]')); var date = pathArray.slice(1, 4).join('-'); var output = '';  for (i = 0; i &lt; resolutions.length; i++) { item = resolutions[i]; output += date + ': ' + '[' + item.href + ' ' + item.innerHTML.replace(/\n/, ' ') + ']\n'; };  alert (output); " title="Copy resolutions in wiki format">Resolutions</a></p>
+	</body>
+</html>
+var resolutions = document.querySelector('#ResolutionSummary').parentNode.nextElementSibling.getElementsByTagName('a'); if (!resolutions.length > 0) alert ('No resolutions found in these minutes.');  var pathArray = window.location.pathname.split(new RegExp('[/-]')); var date = pathArray.slice(1, 4).join('-'); var output = '';  for (i = 0; i &lt; resolutions.length; i++) { item = resolutions[i]; output += date + ': ' + '[' + item.href + ' ' + item.innerHTML.replace(/\n/, ' ') + ']\n'; };  alert (output); 
