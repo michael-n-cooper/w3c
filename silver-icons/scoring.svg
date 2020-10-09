@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="10cm"
@@ -16,48 +15,12 @@
    version="1.1"
    id="svg11020"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="scoring.svg">
+   sodipodi:docname="scoring.svg"
+   inkscape:export-filename="C:\Documents\code\GitHub\michael-n-cooper\w3c\silver-icons\scoring-a.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
-     id="defs11014">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3435"
-       id="linearGradient3437"
-       x1="5.681725"
-       y1="245.78574"
-       x2="96.746841"
-       y2="245.78574"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.97222221,0,0,0.97222224,2.7083336,5.54167)" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3435">
-      <stop
-         style="stop-color:#cd7e33;stop-opacity:1"
-         offset="0"
-         id="stop3431" />
-      <stop
-         id="stop3439"
-         offset="0.15676616"
-         style="stop-color:#cd7e33;stop-opacity:1" />
-      <stop
-         style="stop-color:#c0c0c0;stop-opacity:1"
-         offset="0.38089934"
-         id="stop3441" />
-      <stop
-         id="stop3443"
-         offset="0.58155191"
-         style="stop-color:#c0c0c0;stop-opacity:1" />
-      <stop
-         style="stop-color:#d4ae38;stop-opacity:1"
-         offset="0.84624255"
-         id="stop3445" />
-      <stop
-         style="stop-color:#d4ae38;stop-opacity:1"
-         offset="1"
-         id="stop3433" />
-    </linearGradient>
-  </defs>
+     id="defs11014" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -65,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.12374369"
-     inkscape:cx="-2692.4614"
-     inkscape:cy="527.25245"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-400.86096"
+     inkscape:cy="99.030597"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -109,11 +72,24 @@
        height="84.999992"
        x="10.000006"
        y="202.00002" />
-    <path
-       style="fill:none;stroke:url(#linearGradient3437);stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 9.9999999,287.00002 84.9999971,-85"
-       id="path11602"
-       inkscape:connector-curvature="0" />
+    <g
+       id="g3514">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3488"
+         d="m 22.499999,289.50002 v -27.5"
+         style="fill:none;stroke:#cd7f33;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3488-2"
+         d="M 52.499999,289.50001 V 229.50002"
+         style="fill:none;stroke:#c0c0c0;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3488-7"
+         d="M 82.499998,289.50001 V 202.00002"
+         style="fill:none;stroke:#d4ae38;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect11569"
