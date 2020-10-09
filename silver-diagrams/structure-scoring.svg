@@ -678,6 +678,36 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="scale(0.4)" />
     </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-2-6-6-3-7"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path74952-5-96-7-7-8"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-1-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path74952-2-7"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -687,8 +717,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="443.97389"
-     inkscape:cy="352.09646"
+     inkscape:cx="52.881586"
+     inkscape:cy="266.88916"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -722,7 +752,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -930,7 +960,7 @@
            id="flowPara74682-2-4">Functional Categories</flowPara></flowRoot>    </g>
     <g
        id="g76503-4"
-       transform="translate(65,2.3769971e-5)">
+       transform="translate(65.000004,45.000033)">
       <rect
          y="-73"
          x="130"
@@ -980,7 +1010,7 @@
            id="flowPara74682-7-7">Score by Outcome</flowPara></flowRoot>    </g>
     <g
        id="g76510-8"
-       transform="translate(-7.0000037e-8,2.3769971e-5)">
+       transform="translate(-64.999998,3.5407349e-5)">
       <rect
          y="-28.000002"
          x="130"
@@ -1096,7 +1126,7 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-6-4-2)"
-       d="m 155,-35.499976 -1e-5,4.5"
+       d="m 90.000002,9.5000342 -10e-6,4.4999998"
        id="path74805-0-3-9-1"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -1112,25 +1142,31 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 220,-42.999976 v 7.5 H 90 v -7.5"
+       d="m 220,2.0000341 v 7.5 H 90.000002 v -7.5"
        id="path76796-1"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-12-1-6)"
-       d="m 220,-87.999961 v 12.000003"
+       style="fill:none;stroke:#000000;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-12-1-6)"
+       d="m 220,-87.999958 v 56.999992"
        id="path74805-0-39-8-4"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-6-6-3-1)"
        d="M 130,-102.99998 H 118"
        id="path74805-0-3-0-3-0"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker2978)"
-       d="m 129.99998,-12.999986 h -40 L 90,14.000024"
-       id="path2661"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-6-6-3-7)"
+       d="m 115,-57.999967 95,0 v 27"
+       id="path74805-0-3-0-3-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-1-4)"
+       d="m 90.000002,-42.999967 v 12"
+       id="path74805-7-0"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
