@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="311.5mm"
-   height="196mm"
-   viewBox="0 0 311.5 196.00001"
+   width="247mm"
+   height="176.00002mm"
+   viewBox="0 0 247 176.00002"
    version="1.1"
    id="svg74033"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -408,6 +408,21 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="scale(0.4)" />
     </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-2-12-1"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path74952-5-967-1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -416,9 +431,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="669.43554"
-     inkscape:cy="215.96011"
+     inkscape:zoom="1"
+     inkscape:cx="490.51842"
+     inkscape:cy="279.99539"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -438,8 +453,8 @@
        units="mm"
        spacingx="0.50000001"
        spacingy="0.50000001"
-       originx="0.99999996"
-       originy="-279.50003"
+       originx="0.99999993"
+       originy="-299.50002"
        empspacing="10" />
   </sodipodi:namedview>
   <metadata
@@ -708,7 +723,7 @@
            id="flowPara74682-7">Score by Outcome</flowPara></flowRoot>    </g>
     <g
        id="g76510"
-       transform="translate(65.000004,-50.000008)">
+       transform="translate(65.000004,-94.999976)">
       <rect
          y="-28.000002"
          x="130"
@@ -732,17 +747,17 @@
            style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:24px;line-height:1;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle"
            id="flowPara74682-1">Overall Score</flowPara></flowRoot>    </g>
     <g
-       id="g76780"
-       transform="translate(3.7500079e-6,4.9999924)">
+       id="g1145"
+       transform="translate(4.360004e-6,10.000003)">
       <rect
-         y="-78"
-         x="260"
-         height="20.000004"
+         y="-87.999985"
+         x="195"
+         height="15"
          width="50"
          id="rect74664-7"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,202.47687,-82.612788)"
+         transform="matrix(0.26458333,0,0,0.26458333,137.47687,-95.239896)"
          style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          id="flowRoot74666-4"
          xml:space="preserve"><flowRegion
@@ -757,17 +772,16 @@
            style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:24px;line-height:1;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle"
            id="flowPara74682-3">Bronze</flowPara></flowRoot>    </g>
     <g
-       id="g76794"
-       transform="translate(3.7500079e-6,-15.000008)">
+       id="g1169">
       <rect
-         y="12.000002"
-         x="260"
-         height="20"
+         y="-17.999977"
+         x="195"
+         height="14.999996"
          width="50"
          id="rect74664-57"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,202.47687,7.387213)"
+         transform="matrix(0.26458333,0,0,0.26458333,137.47687,-25.112767)"
          style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          id="flowRoot74666-7"
          xml:space="preserve"><flowRegion
@@ -782,17 +796,17 @@
            style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:24px;line-height:1;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle"
            id="flowPara74682-70">Gold</flowPara></flowRoot>    </g>
     <g
-       id="g76787"
-       transform="translate(3.7500079e-6,-5.0000061)">
+       id="g1157"
+       transform="translate(4.3599963e-6,5.0000034)">
       <rect
-         y="-33"
-         x="260"
-         height="20.000002"
+         y="-52.999977"
+         x="195"
+         height="14.999999"
          width="50"
          id="rect74664-58"
          style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <flowRoot
-         transform="matrix(0.26458333,0,0,0.26458333,202.47687,-37.612786)"
+         transform="matrix(0.26458333,0,0,0.26458333,137.47687,-60.112765)"
          style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          id="flowRoot74666-45"
          xml:space="preserve"><flowRegion
@@ -837,30 +851,30 @@
        id="path74805-0-3-09"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-6-10)"
-       d="m 245,-63.000006 h 12"
-       id="path74805-0-3-7"
-       inkscape:connector-curvature="0" />
-    <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-6-4)"
-       d="m 187.5,-63.000014 4.5,8e-6"
+       d="m 187,-107.99999 4.5,1e-5"
        id="path74805-0-3-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-12)"
-       d="m 285,-53.000006 v 12"
+       d="m 220,-62.999977 v 12"
        id="path74805-0-39"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-7)"
-       d="M 285,-18.000006 V -6.0000066"
+       d="m 220,-32.999977 v 12"
        id="path74805-0-66"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 180,-108.00001 h 7.5 v 90.000003 H 180"
        id="path76796"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-2-12-1)"
+       d="m 220,-92.999978 v 12"
+       id="path74805-0-39-8"
        inkscape:connector-curvature="0" />
   </g>
 </svg>
