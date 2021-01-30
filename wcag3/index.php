@@ -14,8 +14,8 @@
 				
 			</table>
 		</main>
-		<footer>
-			
+		<footer style="display: block; width: 30ex; margin-left: auto; margin-right: auto; position: fixed; right: 0; left: 0; bottom: 0;">
+			<img src="../silver-icons/wcag-tengwar.svg" alt="W3C Accessibility Guidelines"/>
 		</footer>
 	</body>
 </html>
