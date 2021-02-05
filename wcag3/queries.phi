@@ -7,20 +7,11 @@ const QUERY_ITEMS_FROM_HIERARCHY = "select item_key from (select hierarchy.item_
 
 function dataToArray() {
 	$sth = constructQuery(QUERY_TYPES, array("type_id"=>array("wcag-3-gl","fast-group")));
-	$sth->execute();
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 		$sth_items = constructQuery(QUERY_ITEMS, array("type_id"=>$row["type_id"]));
-		$sth_items->execute();
 		while ($row_item = $sth_items->fetch(PDO::FETCH_ASSOC)) {
-			$sth_child_ids = constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_id"=>$row_item["item_id"], "parent_type_id"=>$row["type_id"]));
-			$sth_child_ids->execute();
-			$child_item_keys = null;
-			while ($row_child_ids = $sth_child_ids->fetch()) {
-				$child_item_keys[] = $row_child_ids["item_key"];
-			}
-			$sth_child = constructQuery(QUERY_ITEMS, null, array("item_key"=>$child_item_keys));
-			$sth_child->execute();
+			$sth_child = constructQuery(QUERY_ITEMS, null, array("item_key"=>colToArray(constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_id"=>$row_item["item_id"], "parent_type_id"=>$row["type_id"])), "item_key")));
 			while ($row_child = $sth_child->fetch(PDO::FETCH_ASSOC)) {
 				$row_item["items"][] = $row_child;
 			}
@@ -32,7 +23,7 @@ function dataToArray() {
 }
 
 // construct a query using a starting sql statement and arrays of "and" and "or" restrictions,
-// create a PDOStatement, and bind values, returning the PDOStatement
+// create a PDOStatement, bind values, execute, and return the PDOStatement
 // $ands and $ors are associative arrays whose keys are the parameter to filter on, and values are the values
 // values can be arrays themselves if needing to filter on multiple values of the same parameter (in or relationship with each other)
 function constructQuery($base, $ands = null, $ors = null) {
@@ -51,17 +42,15 @@ function constructQuery($base, $ands = null, $ors = null) {
 		$i = 0;
 		foreach($ands as $key => $val) {
 			if ($i > 0) $sql .= " and";
-			if (is_array($val)) {
-				$sql .= " (";
-				$j = 0;
-				foreach($val as $innerval) {
-					if ($j > 0) $sql .= " or";
-					$sql .= " " . $key . " = ?";
-					$j++;
-				}
-				$sql .= ")";
+			$val = paramArray($val);
+			$sql .= " (";
+			$j = 0;
+			foreach($val as $innerval) {
+				if ($j > 0) $sql .= " or";
+				$sql .= " " . $key . " = ?";
+				$j++;
 			}
-			else $sql .= " " . $key . " = ?";
+			$sql .= ")";
 			$i++;
 		}
 	}
@@ -75,17 +64,15 @@ function constructQuery($base, $ands = null, $ors = null) {
 		$i = 0;
 		foreach($ors as $key => $val) {
 			if ($i > 0) $sql .= " or";
-			if (is_array($val)) {
-				$sql .= " (";
-				$j = 0;
-				foreach($val as $innerval) {
-					if ($j > 0) $sql .= " or";
-					$sql .= " " . $key . " = ?";
-					$j++;
-				}
-				$sql .= ")";
+			$val = paramArray($val);
+			$sql .= " (";
+			$j = 0;
+			foreach($val as $innerval) {
+				if ($j > 0) $sql .= " or";
+				$sql .= " " . $key . " = ?";
+				$j++;
 			}
-			else $sql .= " " . $key . " = ?";
+			$sql .= ")";
 			$i++;
 		}
 		$sql .= ")";
@@ -101,14 +88,9 @@ function constructQuery($base, $ands = null, $ors = null) {
 	// bind "and" values
 	if (!is_null($ands)) {
 		foreach ($ands as $val) {
-			if (is_array($val)) {
-				foreach($val as $innerval) {
-					$sth->bindValue($i, $innerval);
-					$i++;
-				}
-			}
-			else {
-				$sth->bindValue($i, $val);
+			$val = paramArray($val);
+			foreach($val as $innerval) {
+				$sth->bindValue($i, $innerval);
 				$i++;
 			}
 		}
@@ -117,19 +99,31 @@ function constructQuery($base, $ands = null, $ors = null) {
 	// bind "or" values
 	if (!is_null($ors)) {
 		foreach ($ors as $val) {
-			if (is_array($val)) {
-				foreach($val as $innerval) {
-					$sth->bindValue($i, $innerval);
-					$i++;
-				}
-			}
-			else {
-				$sth->bindValue($i, $val);
+			$val = paramArray($val);
+			foreach($val as $innerval) {
+				$sth->bindValue($i, $innerval);
 				$i++;
 			}
 		}
 	}
 	
+	$sth->execute();
+	
 	return $sth;
+}
+
+// ensure a parameter is an array
+function paramArray($val) {
+	if (is_array($val)) return $val;
+	else return array($val);
+}
+
+// get the values of a query column as an array
+function colToArray($sth, $colname) {
+	$col = null;
+	while ($row = $sth->fetch()) {
+		$col[] = $row[$colname];
+	}
+	return $col;
 }
 ?>
