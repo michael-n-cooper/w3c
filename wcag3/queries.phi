@@ -1,19 +1,26 @@
 <?php
 require_once "_db_connect.phi";
 
-const QUERY_ITEMS = "select item_id, handle, item, description from items join item_types on items.item_key = item_types.item_key join types on item_types.type_key = types.type_key";
-const QUERY_TYPES = "select type_id, type from types";
-const QUERY_ITEMS_FROM_HIERARCHY = "select item_key from (select hierarchy.item_key, items.item_id, hierarchy.type_key, types.type_id, hierarchy.parent_item_key, parent_items.item_id as parent_item_id, hierarchy.parent_type_key, parent_types.type_id as parent_type_id from hierarchy join items on hierarchy.item_key = items.item_key join types on hierarchy.type_key = types.type_key join items as parent_items on hierarchy.parent_item_key = parent_items.item_key join types as parent_types on hierarchy.parent_type_key = parent_types.type_key) as hierarchy_expanded";
+const QUERY_ITEMS = "select item_id, handle, item, description, items.item_key, types.type_key from items join item_types on items.item_key = item_types.item_key join types on item_types.type_key = types.type_key";
+const QUERY_TYPES = "select type_id, type, type_key from types";
+const QUERY_ITEMS_FROM_HIERARCHY = "select item_key, type_key from (select hierarchy.item_key, items.item_id, hierarchy.type_key, types.type_id, hierarchy.parent_item_key, parent_items.item_id as parent_item_id, hierarchy.parent_type_key, parent_types.type_id as parent_type_id from hierarchy join items on hierarchy.item_key = items.item_key join types on hierarchy.type_key = types.type_key join items as parent_items on hierarchy.parent_item_key = parent_items.item_key join types as parent_types on hierarchy.parent_type_key = parent_types.type_key) as hierarchy_expanded";
 
 function dataToArray() {
-	$sth = constructQuery(QUERY_TYPES, array("type_id"=>array("wcag-3-gl","fast-group")));
+	$sth = constructQuery(QUERY_TYPES, array("type_id"=>array("functional-ability")));
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 		$sth_items = constructQuery(QUERY_ITEMS, array("type_id"=>$row["type_id"]));
 		while ($row_item = $sth_items->fetch(PDO::FETCH_ASSOC)) {
-			$sth_child = constructQuery(QUERY_ITEMS, null, array("item_key"=>colToArray(constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_id"=>$row_item["item_id"], "parent_type_id"=>$row["type_id"])), "item_key")));
-			while ($row_child = $sth_child->fetch(PDO::FETCH_ASSOC)) {
-				$row_item["items"][] = $row_child;
+			$child_items = constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_id"=>$row_item["item_id"], "parent_type_id"=>$row["type_id"]));
+			$child_type_filter = array_unique(colToArray($child_items, "type_key"));
+			$child_items->execute();
+			$child_item_types = constructQuery(QUERY_TYPES, array("type_key"=>$child_type_filter));
+			while ($row_child_type = $child_item_types->fetch(PDO::FETCH_ASSOC)) {
+				$sth_child = constructQuery(QUERY_ITEMS, array("items.item_key"=>colToArray($child_items, "item_key"), "types.type_key"=>$row_child_type["type_key"]));
+				while ($row_child = $sth_child->fetch(PDO::FETCH_ASSOC)) {
+					$row_child_type["items"][] = $row_child;
+				}
+				$row_item["types"][] = $row_child_type;
 			}
 			$row["items"][] = $row_item;
 		}
@@ -78,7 +85,31 @@ function constructQuery($base, $ands = null, $ors = null) {
 		$sql .= ")";
 	}
 	
-	//print $sql;
+	// debugging
+	/*
+	print $sql . "\n";
+	if (!is_null($ands)) {
+		print "Ands: ";
+		foreach($ands as $key => $val) {
+			print $key . "=";
+			if (is_array($val)) foreach ($val as $val2) print $val2 . " ";
+			else print $val;
+			print (", ");
+		}
+		print "\n";
+	}
+	if (!is_null($ors)) {
+		print "Ors: ";
+		foreach($ors as $key => $val) {
+			print $key . "=";
+			if (is_array($val)) foreach ($val as $val2) print $val2 . " ";
+			else print $val;
+			print (", ");
+		}
+		print "\n";
+	}
+	print "\n";
+	*/
 	
 	// initialize PDO statement
 	$sth = $dbh->prepare($sql);
