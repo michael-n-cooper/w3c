@@ -1,0 +1,33 @@
+<?php
+	require "queries.phi";
+	// $search = type of query to run
+	
+	function listToArray($arr) {
+		$result = null;
+		foreach ($arr as $key=>$val) {
+			if (strstr($val, ",")) $result[$key] = explode(",", $val);
+			else $result[$key] = $val;
+		}
+		return $result;
+	}
+	
+	function runQuery($search, $params) {
+		global $search;
+		$depth = 1;
+		$ands = null;
+		$ors = null;
+		
+		$params = listToArray($params);
+		
+		if (!is_null($params)) foreach ($params as $key=>$val) {
+			if ($key == "type_id") $ands[$key] = $val;
+			if ($key == "item_id") $ands[$key] = $val;
+			if ($key == "depth") $depth = $val;
+		}
+		
+		if ($search == "types") return array("types"=>queryTypes($ands, $ors, $depth));
+	}
+
+	header('Content-type: application/json');
+	print (json_encode(runQuery($search, $_GET)));
+?>

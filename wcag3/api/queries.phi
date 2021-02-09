@@ -1,62 +1,63 @@
 <?php
-require_once "_db_connect.phi";
+require_once "../_db_connect.phi";
 
 const QUERY_ITEMS = "select items.item_key, item_id, handle, item, description, types.type_id, types.type_key from items join item_types on items.item_key = item_types.item_key join types on item_types.type_key = types.type_key";
 const QUERY_TYPES = "select type_key, type_id, type from types";
 const QUERY_ITEMS_FROM_HIERARCHY = "select item_key, type_key from (select hierarchy.item_key, items.item_id, hierarchy.type_key, types.type_id, hierarchy.parent_item_key, parent_items.item_id as parent_item_id, hierarchy.parent_type_key, parent_types.type_id as parent_type_id from hierarchy join items on hierarchy.item_key = items.item_key join types on hierarchy.type_key = types.type_key join items as parent_items on hierarchy.parent_item_key = parent_items.item_key join types as parent_types on hierarchy.parent_type_key = parent_types.type_key) as hierarchy_expanded";
 
-function dataToArray() {
-	return queryTypes(array("type_id"=>array("functional-ability")), null, 5);
-}
-
-function queryTypes($ands, $ors, $depth = 0) {
+// queries for each level of data
+// item types
+function queryTypes($ands, $ors, $depth = 1) {
 	$result = null;
 	$sth = constructQuery(QUERY_TYPES, $ands, $ors);
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
-		if ($depth > 0) {
-			$row["items"] = queryItems(array("type_id"=>$row["type_id"]), null, $depth -1);
+		if ($depth > 1) {
+			$row["items"] = queryItems(array("type_id"=>$row["type_id"]), null, $depth - 1);
 		}
 		$result[] = $row;
 	}
 	return $result;
 }
 
-function queryItems($ands, $ors, $depth = 0) {
+// items, usually filtered by type
+function queryItems($ands, $ors, $depth = 1) {
 	$result = null;
 	$sth = constructQuery(QUERY_ITEMS, $ands, $ors);
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
-		if ($depth > 0) {
-			$row["types"] = queryChildTypes($row["item_key"], $row["type_key"], $depth -1);
+		if ($depth > 1) {
+			$row["types"] = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
 		}
 		$result[] = $row;
 	}
 	return $result;
 }
 
-function queryChildTypes($parent_item_key, $parent_type_key, $depth = 0) {
+// types of items that are children of the current item
+function queryChildTypes($parent_item_key, $parent_type_key, $depth = 1) {
 	$result = null;
 	$sth = constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_key"=>$parent_item_key, "parent_type_key"=>$parent_type_key));
 	$types = constructQuery(QUERY_TYPES, array("type_key"=>array_unique(colToArray($sth, "type_key"))));
 	
 	while ($row = $types->fetch(PDO::FETCH_ASSOC)) {
-		if ($depth > 0) {
-			$row["items"] = queryChildItems($parent_item_key, $parent_type_key, $row["type_key"], $depth -1);
+		if ($depth > 1) {
+			$row["items"] = queryChildItems($parent_item_key, $parent_type_key, $row["type_key"], $depth - 1);
 		}
 		$result[] = $row;
 	}
 	return $result;
 }
 
-function queryChildItems($parent_item_key, $parent_type_key, $type_key, $depth = 0) {
+// items that are children of the current item filtered by type
+function queryChildItems($parent_item_key, $parent_type_key, $type_key, $depth = 1) {
 	$result = null;
 	$sth = constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_key"=>$parent_item_key, "parent_type_key"=>$parent_type_key, "type_key"=>$type_key));
 	$items = constructQuery(QUERY_ITEMS, array("items.item_key"=>colToArray($sth, "item_key")));
 	
 	while ($row = $items->fetch(PDO::FETCH_ASSOC)) {
-		if ($depth > 0) {
-			$row["types"] = queryChildTypes($row["item_key"], $row["type_key"], $depth -1);
+		if ($depth > 1) {
+			$row["types"] = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
 		}
 		$result[] = $row;
 	}
