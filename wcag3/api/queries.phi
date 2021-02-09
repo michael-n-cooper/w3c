@@ -13,7 +13,8 @@ function queryTypes($ands, $ors, $depth = 1) {
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 		if ($depth > 1) {
-			$row["items"] = queryItems(array("type_id"=>$row["type_id"]), null, $depth - 1);
+			$children = queryItems(array("type_id"=>$row["type_id"]), null, $depth - 1);
+			if (!is_null($children)) $row["items"] = $children;
 		}
 		$result[] = $row;
 	}
@@ -27,7 +28,8 @@ function queryItems($ands, $ors, $depth = 1) {
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 		if ($depth > 1) {
-			$row["types"] = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
+			$children = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
+			if (!is_null($children)) $row["types"] = $children;
 		}
 		$result[] = $row;
 	}
@@ -38,13 +40,17 @@ function queryItems($ands, $ors, $depth = 1) {
 function queryChildTypes($parent_item_key, $parent_type_key, $depth = 1) {
 	$result = null;
 	$sth = constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_key"=>$parent_item_key, "parent_type_key"=>$parent_type_key));
-	$types = constructQuery(QUERY_TYPES, array("type_key"=>array_unique(colToArray($sth, "type_key"))));
 	
-	while ($row = $types->fetch(PDO::FETCH_ASSOC)) {
-		if ($depth > 1) {
-			$row["items"] = queryChildItems($parent_item_key, $parent_type_key, $row["type_key"], $depth - 1);
+	if ($sth->rowCount() > 0) {
+		$types = constructQuery(QUERY_TYPES, array("type_key"=>array_unique(colToArray($sth, "type_key"))));
+		
+		while ($row = $types->fetch(PDO::FETCH_ASSOC)) {
+			if ($depth > 1) {
+				$children = queryChildItems($parent_item_key, $parent_type_key, $row["type_key"], $depth - 1);
+				if (!is_null($children)) $row["items"] = $children;
+			}
+			$result[] = $row;
 		}
-		$result[] = $row;
 	}
 	return $result;
 }
@@ -53,13 +59,17 @@ function queryChildTypes($parent_item_key, $parent_type_key, $depth = 1) {
 function queryChildItems($parent_item_key, $parent_type_key, $type_key, $depth = 1) {
 	$result = null;
 	$sth = constructQuery(QUERY_ITEMS_FROM_HIERARCHY, array("parent_item_key"=>$parent_item_key, "parent_type_key"=>$parent_type_key, "type_key"=>$type_key));
-	$items = constructQuery(QUERY_ITEMS, array("items.item_key"=>colToArray($sth, "item_key")));
 	
-	while ($row = $items->fetch(PDO::FETCH_ASSOC)) {
-		if ($depth > 1) {
-			$row["types"] = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
+	if ($sth->rowCount() > 0) {
+		$items = constructQuery(QUERY_ITEMS, array("items.item_key"=>colToArray($sth, "item_key")));
+		
+		while ($row = $items->fetch(PDO::FETCH_ASSOC)) {
+			if ($depth > 1) {
+				$children = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
+				if (!is_null($children)) $row["types"] = $children;
+			}
+			$result[] = $row;
 		}
-		$result[] = $row;
 	}
 	return $result;
 }
