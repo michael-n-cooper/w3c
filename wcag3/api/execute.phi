@@ -26,6 +26,7 @@
 		}
 		
 		if ($search == "types") return array("types"=>queryTypes($ands, $ors, $depth));
+		if ($search == "items") return array("items"=>queryItems($ands, $ors, $depth));
 	}
 
 	header('Content-type: application/json');
