@@ -12,11 +12,12 @@ function queryTypes($ands, $ors, $depth = 1) {
 	$sth = constructQuery(QUERY_TYPES, $ands, $ors);
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+		$vals = filterCols("types", $row);
 		if ($depth > 1) {
 			$children = queryItems(array("type_id"=>$row["type_id"]), null, $depth - 1);
-			if (!is_null($children)) $row["items"] = $children;
+			if (!is_null($children)) $vals["items"] = $children;
 		}
-		$result[] = $row;
+		$result[] = $vals;
 	}
 	return $result;
 }
@@ -27,11 +28,12 @@ function queryItems($ands, $ors, $depth = 1) {
 	$sth = constructQuery(QUERY_ITEMS, $ands, $ors);
 	
 	while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+		$vals = filterCols("items", $row);
 		if ($depth > 1) {
 			$children = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
-			if (!is_null($children)) $row["types"] = $children;
+			if (!is_null($children)) $vals["types"] = $children;
 		}
-		$result[] = $row;
+		$result[] = $vals;
 	}
 	return $result;
 }
@@ -45,11 +47,12 @@ function queryChildTypes($parent_item_key, $parent_type_key, $depth = 1) {
 		$types = constructQuery(QUERY_TYPES, array("type_key"=>array_unique(colToArray($sth, "type_key"))));
 		
 		while ($row = $types->fetch(PDO::FETCH_ASSOC)) {
+			$vals = filterCols("types", $row);
 			if ($depth > 1) {
 				$children = queryChildItems($parent_item_key, $parent_type_key, $row["type_key"], $depth - 1);
-				if (!is_null($children)) $row["items"] = $children;
+				if (!is_null($children)) $vals["items"] = $children;
 			}
-			$result[] = $row;
+			$result[] = $vals;
 		}
 	}
 	return $result;
@@ -64,14 +67,22 @@ function queryChildItems($parent_item_key, $parent_type_key, $type_key, $depth =
 		$items = constructQuery(QUERY_ITEMS, array("items.item_key"=>colToArray($sth, "item_key")));
 		
 		while ($row = $items->fetch(PDO::FETCH_ASSOC)) {
+			$vals = filterCols("items", $row);
 			if ($depth > 1) {
 				$children = queryChildTypes($row["item_key"], $row["type_key"], $depth - 1);
-				if (!is_null($children)) $row["types"] = $children;
+				if (!is_null($children)) $vals["types"] = $children;
 			}
-			$result[] = $row;
+			$result[] = $vals;
 		}
 	}
 	return $result;
+}
+
+function filterCols($type, $resultset) {
+	if ($type == "items") $cols = array("item_id"=>null, "handle"=>null, "item"=>null, "description"=>null);
+	if ($type == "types") $cols = array("type_id"=>null, "type"=>null);
+	
+	return array_intersect_key($resultset, $cols);
 }
 
 // construct a query using a starting sql statement and arrays of "and" and "or" restrictions,
