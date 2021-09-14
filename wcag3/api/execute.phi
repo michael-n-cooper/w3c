@@ -11,6 +11,14 @@
 		return $result;
 	}
 	
+	function queryToArray() {
+		$result = null;
+		if (is_set($_SERVER["QUERY_STRING"])) {
+			$interim = explode("&", $_SERVER["QUERY_STRING"]);
+		}
+		return $result;
+	}
+	
 	function runQuery($search, $params) {
 		global $search;
 		$depth = 1;
