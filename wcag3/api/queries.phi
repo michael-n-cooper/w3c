@@ -218,4 +218,27 @@ function colToArray($sth, $colname) {
 	}
 	return $col;
 }
+
+function updateData($json) {
+	$data = json_decode($json, true);
+	
+	function walkArray($arr) {
+		foreach ($arr as $val) {
+			if (is_array($val)) {
+				if (array_key_exists("item", $val)) addItem($val);
+				if (array_key_exists("type", $val)) addType($val);
+				walkArray($val);
+			}
+		}
+	}
+	
+	function addItem($item) {
+		print($item["item"]);
+	}
+	
+	function addType($type) {
+		print($type["type"]);
+	}
+}
+
 ?>
