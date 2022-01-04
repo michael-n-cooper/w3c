@@ -68,9 +68,6 @@
         <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/guideline"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
     </Declaration>
     <Declaration>
@@ -89,9 +86,6 @@
         <ObjectProperty IRI="/model/relation/levelLowerThan"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/model/relation/specification"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/model/relation/supports"/>
     </Declaration>
     <Declaration>
@@ -99,9 +93,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/descriptionAt"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/model/property/guideline"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/handle"/>
@@ -117,9 +108,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/shortname"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/model/property/specification"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/title"/>
@@ -508,6 +496,11 @@
         <NamedIndividual IRI="/specification/WCAG30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
         <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
         <NamedIndividual IRI="/specification/WCAG30"/>
@@ -520,7 +513,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/descriptionAt"/>
         <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
-        <Literal>https://www.w3.org/WAI/GL/WCAG3/2022/how-tos/text-alternatives/</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/WAI/GL/WCAG3/2022/how-tos/text-alternatives/</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -540,7 +533,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/descriptionAt"/>
         <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
-        <Literal>https://www.w3.org/WAI/GL/WCAG3/2022/outcomes/text-alternative-available</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/WAI/GL/WCAG3/2022/outcomes/text-alternative-available</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -558,24 +551,20 @@
         <Literal xml:lang="en">Provides text alternatives for non-text content for user agents and assistive technologies. This allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/guideline"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
-        <ObjectProperty IRI="/guideline"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
-        <ObjectProperty IRI="/guideline"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
-        <ObjectProperty IRI="/guideline"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/isSupportedBy"/>
-        <ObjectProperty IRI="/guideline"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/levelHigherThan"/>
@@ -586,16 +575,12 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/model/relation/specification"/>
+        <ObjectProperty IRI="/model/relation/supports"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/model/relation/supports"/>
-        <ObjectProperty IRI="/guideline"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
-        <ObjectProperty IRI="/model/relation/specification"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
@@ -618,10 +603,6 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="/model/relation/supports"/>
     </TransitiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/guideline"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
         <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
@@ -635,6 +616,10 @@
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/isSupportedBy"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/levelHigherThan"/>
         <Class IRI="/model/class/ConformanceLevel"/>
     </ObjectPropertyDomain>
@@ -649,14 +634,14 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/levelLowerThan"/>
         <Class IRI="/model/class/MaturityLevel"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/model/relation/specification"/>
-        <Class IRI="/model/class/GuidelineSpecification"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/supports"/>
         <Class IRI="/model/class/GuidelineStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/usesGuideline"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
@@ -694,54 +679,6 @@
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyRange>
-    <EquivalentDataProperties>
-        <DataProperty IRI="/model/property/name"/>
-        <DataProperty IRI="/model/property/title"/>
-    </EquivalentDataProperties>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/descriptionAt"/>
-        <DataProperty IRI="/model/property/guideline"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/guideline"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/handle"/>
-        <DataProperty IRI="/model/property/guideline"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/id"/>
-        <DataProperty IRI="/model/property/guideline"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/name"/>
-        <DataProperty IRI="/model/property/guideline"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/number"/>
-        <DataProperty IRI="/model/property/guideline"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/shortname"/>
-        <DataProperty IRI="/model/property/specification"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/specification"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/title"/>
-        <DataProperty IRI="/model/property/specification"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/version"/>
-        <DataProperty IRI="/model/property/specification"/>
-    </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
-    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/descriptionAt"/>
         <Class IRI="/model/class/GuidelineStatement"/>
@@ -764,10 +701,6 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/shortname"/>
-        <Class IRI="/model/class/GuidelineSpecification"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/model/property/specification"/>
         <Class IRI="/model/class/GuidelineSpecification"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -783,28 +716,12 @@
         <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="/model/property/handle"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="/model/property/id"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/model/property/name"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/model/property/number"/>
         <Datatype abbreviatedIRI="owl:rational"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/model/property/shortname"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/model/property/title"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/model/property/version"/>
