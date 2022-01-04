@@ -65,13 +65,19 @@
         <Class IRI="/model/class/WCAG3Outcome"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/guideline"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/model/relation/isSupportedBy"/>
@@ -83,13 +89,19 @@
         <ObjectProperty IRI="/model/relation/levelLowerThan"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/model/relation/specification"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/model/relation/supports"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
+        <ObjectProperty IRI="/model/relation/usesGuideline"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/descriptionAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/guideline"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/handle"/>
@@ -105,6 +117,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/shortname"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/specification"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/title"/>
@@ -256,69 +271,18 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG2Guideline"/>
-        <ObjectIntersectionOf>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG20"/>
-            </ObjectHasValue>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG21"/>
-            </ObjectHasValue>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG22"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/WCAG2Guideline"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/model/relation/supports"/>
             <Class IRI="/model/class/WCAG2Principle"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG2Principle"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/model/class/WCAG2Principle"/>
-        <ObjectIntersectionOf>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG20"/>
-            </ObjectHasValue>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG21"/>
-            </ObjectHasValue>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG22"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/model/class/WCAG2SuccessCriterion"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
-        <ObjectIntersectionOf>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG20"/>
-            </ObjectHasValue>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG21"/>
-            </ObjectHasValue>
-            <ObjectHasValue>
-                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-                <NamedIndividual IRI="/specification/WCAG22"/>
-            </ObjectHasValue>
-        </ObjectIntersectionOf>
+        <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG2SuccessCriterion"/>
@@ -329,10 +293,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG2SuccessCriterion"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/model/relation/supports"/>
             <Class IRI="/model/class/WCAG2Guideline"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG3ConformanceLevel"/>
@@ -341,27 +305,6 @@
     <SubClassOf>
         <Class IRI="/model/class/WCAG3Guideline"/>
         <Class IRI="/model/class/GuidelineStatement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/WCAG3Guideline"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/supports"/>
-            <Class IRI="/model/class/FunctionalNeed"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/WCAG3Guideline"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/supports"/>
-            <Class IRI="/model/class/UserNeed"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/WCAG3Guideline"/>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-            <NamedIndividual IRI="/specification/WCAG30"/>
-        </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG3MaturityLevel"/>
@@ -374,30 +317,27 @@
     <SubClassOf>
         <Class IRI="/model/class/WCAG3Outcome"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/conformanceLevel"/>
-            <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/FunctionalCategory"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG3Outcome"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
-            <Class IRI="/model/class/WCAG3MaturityLevel"/>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/WCAG3Guideline"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG3Outcome"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/model/relation/supports"/>
-            <Class IRI="/model/class/WCAG3Guideline"/>
+            <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
+            <Class IRI="/model/class/WCAG3MaturityLevel"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/model/class/WCAG3Outcome"/>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-            <NamedIndividual IRI="/specification/WCAG20"/>
-        </ObjectHasValue>
+        <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="/model/class/FunctionalAbility"/>
@@ -549,12 +489,24 @@
         <NamedIndividual IRI="/specification/WCAG30"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <ObjectProperty IRI="/guideline"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/conformanceLevel"/>
+        <ObjectProperty IRI="/guideline"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
+        <ObjectProperty IRI="/guideline"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <ObjectProperty IRI="/guideline"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/isSupportedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="/guideline"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/levelHigherThan"/>
@@ -565,16 +517,20 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/model/relation/supports"/>
+        <ObjectProperty IRI="/model/relation/specification"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="/model/relation/supports"/>
+        <ObjectProperty IRI="/guideline"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/usesGuideline"/>
+        <ObjectProperty IRI="/model/relation/specification"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
-        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <ObjectProperty IRI="/model/relation/usesGuideline"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="/model/relation/isSupportedBy"/>
@@ -594,19 +550,19 @@
         <ObjectProperty IRI="/model/relation/supports"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/model/relation/conformanceLevel"/>
-        <Class IRI="/model/class/WCAG2Guideline"/>
+        <ObjectProperty IRI="/guideline"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
-        <Class IRI="/model/class/WCAG3Outcome"/>
+        <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
         <Class IRI="/model/class/WCAG3Outcome"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -626,6 +582,10 @@
         <Class IRI="/model/class/MaturityLevel"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/specification"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/supports"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyDomain>
@@ -638,7 +598,7 @@
         <Class IRI="/model/class/MaturityLevel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
         <Class IRI="/model/class/GuidelineSpecification"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -662,7 +622,7 @@
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
+        <ObjectProperty IRI="/model/relation/usesGuideline"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyRange>
     <EquivalentDataProperties>
@@ -671,32 +631,48 @@
     </EquivalentDataProperties>
     <SubDataPropertyOf>
         <DataProperty IRI="/model/property/descriptionAt"/>
+        <DataProperty IRI="/model/property/guideline"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/guideline"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/model/property/handle"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="/model/property/guideline"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/model/property/id"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="/model/property/guideline"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/model/property/name"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="/model/property/guideline"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/number"/>
+        <DataProperty IRI="/model/property/guideline"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/model/property/shortname"/>
+        <DataProperty IRI="/model/property/specification"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/specification"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/model/property/title"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="/model/property/specification"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/model/property/version"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="/model/property/specification"/>
     </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/descriptionAt"/>
         <Class IRI="/model/class/GuidelineStatement"/>
@@ -719,6 +695,10 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/shortname"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/specification"/>
         <Class IRI="/model/class/GuidelineSpecification"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
