@@ -155,6 +155,12 @@
         <NamedIndividual IRI="/conformance/wcag3/WCAG3Silver"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
     </Declaration>
     <Declaration>
@@ -441,6 +447,14 @@
         <NamedIndividual IRI="/conformance/wcag3/WCAG3Silver"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="/model/class/WCAG3MaturityLevel"/>
         <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
     </ClassAssertion>
@@ -488,6 +502,61 @@
         <Class IRI="/model/class/GuidelineSpecification"/>
         <NamedIndividual IRI="/specification/WCAG30"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+        <NamedIndividual IRI="/specification/WCAG30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <NamedIndividual IRI="/specification/WCAG30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/supports"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/descriptionAt"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+        <Literal>https://www.w3.org/WAI/GL/WCAG3/2022/how-tos/text-alternatives/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+        <Literal xml:lang="en">Text alternatives</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/id"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+        <Literal>text-alternatives</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+        <Literal xml:lang="en">Provide text alternative for non-text content.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/descriptionAt"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <Literal>https://www.w3.org/WAI/GL/WCAG3/2022/outcomes/text-alternative-available</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <Literal xml:lang="en">Text alternative available</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/id"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <Literal>text-alternative-available</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <Literal xml:lang="en">Provides text alternatives for non-text content for user agents and assistive technologies. This allows users who are unable to perceive and / or understand the non-text content to determine its meaning.</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/guideline"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
