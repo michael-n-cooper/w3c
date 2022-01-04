@@ -44,11 +44,28 @@ function loadTypes() {
 		typeControl.appendChild(option);
 	});
 }
+
+var data = new Array();
+function gatherData() {
+	var form = document.getElementById("form");
+	data["type"] = 
+}
+
+function sendData() {
+	gatherData();
+	alert(JSON.stringify(data));
+}
+
+var form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+	sendData();
+	event.preventDefault();
+}
 	//--></script>
 	</head>
 	<body>
 		<h1>Add / Edit Item</h1>
-		<form>
+		<form id="form">
 			<table>
 				<colgroup>
 					<col />
@@ -57,11 +74,11 @@ function loadTypes() {
 				<tbody>
 					<tr>
 						<td>Type:</td>
-						<td><select id="type"></select></td>
+						<td><select id="type_id"></select></td>
 					</tr>
 					<tr>
 						<td>ID:</td>
-						<td><input type="text" id="id"/></td>
+						<td><input type="text" id="item_id"/></td>
 					</tr>
 					<tr>
 						<td>Handle:</td>
@@ -77,6 +94,7 @@ function loadTypes() {
 					</tr>
 				</tbody>
 			</table>
+			<input type="submit"/>
 		</form>
 		
 	</body>
