@@ -1,0 +1,774 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://wai.w3.org"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://wai.w3.org">
+    <Prefix name="" IRI="https://www.w3.org/WAI/WCAG3"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="wcag" IRI="https://www.w3.org/WAI/WCAG3/"/>
+    <Declaration>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/FunctionalAbility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/FunctionalCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/FunctionalNeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/UserNeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG2Principle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/conformanceLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/isSupportedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/supports"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/descriptionAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/handle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/shortname"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/version"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2AA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2AAA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Bronze"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Gold"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Silver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityMaturing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityPlaceholder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityPolishing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityStable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/specification/ATAG20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/specification/UAAG20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/specification/WCAG10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/specification/WCAG20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/specification/WCAG21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/specification/WCAG22"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/specification/WCAG30"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/model/class/ConformanceLevel"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+            <Class IRI="/model/class/ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <Class IRI="/model/class/ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/FunctionalAbility"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/FunctionalCategory"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/FunctionalNeed"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/FunctionalNeed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/FunctionalCategory"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/GuidelineStatement"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/MaturityLevel"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/MaturityLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+            <Class IRI="/model/class/MaturityLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/MaturityLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <Class IRI="/model/class/MaturityLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/UserNeed"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG20"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG21"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG22"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/WCAG2Principle"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2Principle"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2Principle"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG20"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG21"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG22"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG20"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG21"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+                <NamedIndividual IRI="/specification/WCAG22"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/conformanceLevel"/>
+            <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/WCAG2Guideline"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/FunctionalNeed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/UserNeed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+            <NamedIndividual IRI="/specification/WCAG30"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/conformanceLevel"/>
+            <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
+            <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/WCAG3Guideline"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+            <NamedIndividual IRI="/specification/WCAG20"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/model/class/FunctionalAbility"/>
+        <Class IRI="/model/class/FunctionalCategory"/>
+        <Class IRI="/model/class/FunctionalNeed"/>
+        <Class IRI="/model/class/UserNeed"/>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+        <Class IRI="/model/class/WCAG2Principle"/>
+        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+        <Class IRI="/model/class/WCAG2Principle"/>
+        <Class IRI="/model/class/WCAG2SuccessCriterion"/>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <NamedIndividual IRI="/conformance/wcag1/WCAG1P2"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <NamedIndividual IRI="/conformance/wcag1/WCAG1P3"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag1/WCAG1P3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <NamedIndividual IRI="/conformance/wcag2/WCAG2AA"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2AA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <NamedIndividual IRI="/conformance/wcag2/WCAG2AAA"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2AA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag2/WCAG2AAA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Bronze"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <NamedIndividual IRI="/conformance/wcag3/WCAG3Silver"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Bronze"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Gold"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Silver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+            <NamedIndividual IRI="/conformance/wcag3/WCAG3Gold"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="/conformance/wcag3/WCAG3Silver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityMaturing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityPlaceholder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityPolishing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityStable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <NamedIndividual IRI="/specification/ATAG20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <NamedIndividual IRI="/specification/UAAG20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <NamedIndividual IRI="/specification/WCAG10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <NamedIndividual IRI="/specification/WCAG20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <NamedIndividual IRI="/specification/WCAG21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <NamedIndividual IRI="/specification/WCAG22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <NamedIndividual IRI="/specification/WCAG30"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/isSupportedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/supports"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/model/relation/isSupportedBy"/>
+        <ObjectProperty IRI="/model/relation/supports"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/model/relation/isSupportedBy"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/model/relation/supports"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/conformanceLevel"/>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/conformanceLevel"/>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/supports"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/conformanceLevel"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/guidelineTypeUsedIn"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/supports"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/usesGuidelineType"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </ObjectPropertyRange>
+    <EquivalentDataProperties>
+        <DataProperty IRI="/model/property/name"/>
+        <DataProperty IRI="/model/property/title"/>
+    </EquivalentDataProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/descriptionAt"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/handle"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/id"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/shortname"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/title"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/version"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/descriptionAt"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/handle"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/id"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/name"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/number"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/shortname"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/title"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/version"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/descriptionAt"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/handle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/number"/>
+        <Datatype abbreviatedIRI="owl:rational"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/shortname"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/version"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/model/class/WCAG3MaturityLevel</IRI>
+        <Literal>https://www.w3.org/WAI/GL/wiki/AG_process</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
