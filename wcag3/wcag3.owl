@@ -164,25 +164,25 @@
         <NamedIndividual IRI="/maturity/wcag3/MaturityStable"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/specification/ATAG20"/>
+        <NamedIndividual IRI="/specifications/ATAG20"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/specification/UAAG20"/>
+        <NamedIndividual IRI="/specifications/UAAG20"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/specification/WCAG10"/>
+        <NamedIndividual IRI="/specifications/WCAG10"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/specification/WCAG20"/>
+        <NamedIndividual IRI="/specifications/WCAG20"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/specification/WCAG21"/>
+        <NamedIndividual IRI="/specifications/WCAG21"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/specification/WCAG22"/>
+        <NamedIndividual IRI="/specifications/WCAG22"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/specification/WCAG30"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="/model/class/ConformanceLevel"/>
@@ -464,36 +464,36 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <NamedIndividual IRI="/specification/ATAG20"/>
+        <NamedIndividual IRI="/specifications/ATAG20"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <NamedIndividual IRI="/specification/UAAG20"/>
+        <NamedIndividual IRI="/specifications/UAAG20"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <NamedIndividual IRI="/specification/WCAG10"/>
+        <NamedIndividual IRI="/specifications/WCAG10"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <NamedIndividual IRI="/specification/WCAG20"/>
+        <NamedIndividual IRI="/specifications/WCAG20"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <NamedIndividual IRI="/specification/WCAG21"/>
+        <NamedIndividual IRI="/specifications/WCAG21"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <NamedIndividual IRI="/specification/WCAG22"/>
+        <NamedIndividual IRI="/specifications/WCAG22"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <NamedIndividual IRI="/specification/WCAG30"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
         <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
-        <NamedIndividual IRI="/specification/WCAG30"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="/model/relation/guidelineMaturity"/>
@@ -503,7 +503,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
         <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
-        <NamedIndividual IRI="/specification/WCAG30"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="/model/relation/supports"/>
@@ -732,6 +732,129 @@
         <IRI>/model/class/WCAG3MaturityLevel</IRI>
         <Literal>https://www.w3.org/WAI/GL/wiki/AG_process</Literal>
     </AnnotationAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/essential"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/essential"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/essential"/><Literal xml:lang="en">Essential</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/vision-visual"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/vision-visual"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/vision-visual"/><Literal xml:lang="en">Vision &amp; Visual</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/hearing-auditory"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/hearing-auditory"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/hearing-auditory"/><Literal xml:lang="en">Hearing &amp; Auditory</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/sensory-intersections"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/sensory-intersections"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/sensory-intersections"/><Literal xml:lang="en">Sensory Intersections</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/mobility"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/mobility"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/mobility"/><Literal xml:lang="en">Mobility</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/motor"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/motor"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/motor"/><Literal xml:lang="en">Motor</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/physical-sensory-intersections"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/physical-sensory-intersections"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/physical-sensory-intersections"/><Literal xml:lang="en">Physical &amp; Sensory Intersections</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/speech"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/speech"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/speech"/><Literal xml:lang="en">Speech</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/attention"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/attention"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/attention"/><Literal xml:lang="en">Attention</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/language-communication"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/language-communication"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/language-communication"/><Literal xml:lang="en">Language &amp; Communication</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/learning"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/learning"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/learning"/><Literal xml:lang="en">Learning</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/memory"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/memory"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/memory"/><Literal xml:lang="en">Memory</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/executive"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/executive"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/executive"/><Literal xml:lang="en">Executive</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/mental-health"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/mental-health"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/mental-health"/><Literal xml:lang="en">Mental Health</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/cognitive-sensory-intersections"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/cognitive-sensory-intersections"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/cognitive-sensory-intersections"/><Literal xml:lang="en">Cognitive &amp; Sensory Intersections</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-abilities/independence"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalAbility"/><NamedIndividual IRI="/guidelines/functional-abilities/independence"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-abilities/independence"/><Literal xml:lang="en">Independence</Literal></DataPropertyAssertion>
+	<Declaration><NamedIndividual IRI="/guidelines/functional-needs/perceive-content"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-content"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-content"/><Literal xml:lang="en">Users can perceive content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/perceive-controls"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-controls"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-controls"/><Literal xml:lang="en">Users can perceive controls</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/perceive-structure"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-structure"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-structure"/><Literal xml:lang="en">Users can perceive semantic structure</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/perceive-content-changes"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-content-changes"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-content-changes"/><Literal xml:lang="en">Users can perceive changes to content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/perceive-controls-changes"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-controls-changes"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/perceive-controls-changes"/><Literal xml:lang="en">Users can perceive changes to controls</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/operate-controls"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/operate-controls"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/operate-controls"/><Literal xml:lang="en">Users can operate controls</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/operate-content"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/operate-content"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/operate-content"/><Literal xml:lang="en">Users can operate content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/operate-navigation"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/operate-navigation"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/operate-navigation"/><Literal xml:lang="en">Users can operate navigation</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/operate-orientation"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/operate-orientation"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/operate-orientation"/><Literal xml:lang="en">Users can operate orientation in space</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/adjust-duration"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/adjust-duration"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/adjust-duration"/><Literal xml:lang="en">Users can adjust for duration requirements</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/adjust-content-orientation"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/adjust-content-orientation"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/adjust-content-orientation"/><Literal xml:lang="en">Users can adjust for content orientation</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/adjust-spatial-orientation"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/adjust-spatial-orientation"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/adjust-spatial-orientation"/><Literal xml:lang="en">Users can adjust for orientation in space</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/understand-content"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/understand-content"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/understand-content"/><Literal xml:lang="en">Users can understand content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/understand-controls"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/understand-controls"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/understand-controls"/><Literal xml:lang="en">Users can understand controls</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/understand-structure"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/understand-structure"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/understand-structure"/><Literal xml:lang="en">Users can understand structure</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/understand-navigation"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/understand-navigation"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/understand-navigation"/><Literal xml:lang="en">Users can understand navigation</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/understand-content-changes"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/understand-content-changes"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/understand-content-changes"/><Literal xml:lang="en">Users can understand changes to content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/identify-content-position"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/identify-content-position"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/identify-content-position"/><Literal xml:lang="en">Users can identify their position in content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/identify-context-position"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/identify-context-position"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/identify-context-position"/><Literal xml:lang="en">Users can identify their position in context</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/identify-process-position"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/identify-process-position"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/identify-process-position"/><Literal xml:lang="en">Users can identify their position in a process</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/identify-spatial-position"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/identify-spatial-position"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/identify-spatial-position"/><Literal xml:lang="en">Users can identify their position in a space</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-immersive"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-immersive"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-immersive"/><Literal xml:lang="en">Users can spatially orient in immersive environments</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-augmented"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-augmented"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-augmented"/><Literal xml:lang="en">Users can spatially orient in augmented environments</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/find-content-help"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/find-content-help"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/find-content-help"/><Literal xml:lang="en">Users can find help for content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/find-interaction-help"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/find-interaction-help"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/find-interaction-help"/><Literal xml:lang="en">Users can find help for interaction</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/find-error-help"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/find-error-help"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/find-error-help"/><Literal xml:lang="en">Users can find help for errors</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/customize-content"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/customize-content"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/customize-content"/><Literal xml:lang="en">Users can customize content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/customize-context"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/customize-context"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/customize-context"/><Literal xml:lang="en">Users can customize context</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/customize-settings"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/customize-settings"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/customize-settings"/><Literal xml:lang="en">Users can customize settings</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/discover-content"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/discover-content"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/discover-content"/><Literal xml:lang="en">Users can discover new content</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/discover-context"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/discover-context"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/discover-context"/><Literal xml:lang="en">Users can discover new context</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/error-recover"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/error-recover"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/error-recover"/><Literal xml:lang="en">Users can recover from errors</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/errors-avoid"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/errors-avoid"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/errors-avoid"/><Literal xml:lang="en">Users can avoid errors</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/control-interruptions"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/control-interruptions"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/control-interruptions"/><Literal xml:lang="en">Users can control interruptions</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/harm-physical"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/harm-physical"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/harm-physical"/><Literal xml:lang="en">Users are not harmed physically</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/harm-neurological"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/harm-neurological"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/harm-neurological"/><Literal xml:lang="en">Users are not harmed neurologically</Literal></DataPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/functional-needs/aware-alerts"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/FunctionalNeed"/><NamedIndividual IRI="/guidelines/functional-needs/aware-alerts"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/functional-needs/aware-alerts"/><Literal xml:lang="en">Users are aware of alerts</Literal></DataPropertyAssertion>
 </Ontology>
 
 
