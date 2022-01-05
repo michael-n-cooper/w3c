@@ -125,13 +125,7 @@
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/model/property/descriptionAt"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/model/property/handle"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/model/property/id"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/name"/>
@@ -365,7 +359,22 @@
         <NamedIndividual IRI="/guidelines/functional-needs/understand-structure"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/captions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/clear-words"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/error-prevention"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/visual-contrast-of-text"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
@@ -974,7 +983,27 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/WCAG3Guideline"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/captions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/clear-words"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/error-prevention"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3Guideline"/>
         <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/visual-contrast-of-text"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/WCAG3Outcome"/>
@@ -1045,7 +1074,32 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/captions"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/clear-words"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/error-prevention"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
         <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+        <NamedIndividual IRI="/specifications/WCAG30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/visual-contrast-of-text"/>
         <NamedIndividual IRI="/specifications/WCAG30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1069,19 +1123,9 @@
         <Literal xml:lang="en">Attention</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/attention"/>
-        <Literal>attention</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/cognitive-sensory-intersections"/>
         <Literal xml:lang="en">Cognitive &amp; Sensory Intersections</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/cognitive-sensory-intersections"/>
-        <Literal>cognitive-sensory-intersections</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1089,19 +1133,9 @@
         <Literal xml:lang="en">Essential</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/essential"/>
-        <Literal>essential</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/executive"/>
         <Literal xml:lang="en">Executive</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/executive"/>
-        <Literal>executive</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1109,19 +1143,9 @@
         <Literal xml:lang="en">Hearing &amp; Auditory</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/hearing-auditory"/>
-        <Literal>hearing-auditory</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/independence"/>
         <Literal xml:lang="en">Independence</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/independence"/>
-        <Literal>independence</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1129,19 +1153,9 @@
         <Literal xml:lang="en">Language &amp; Communication</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/language-communication"/>
-        <Literal>language-communication</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/learning"/>
         <Literal xml:lang="en">Learning</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/learning"/>
-        <Literal>learning</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1149,19 +1163,9 @@
         <Literal xml:lang="en">Memory</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/memory"/>
-        <Literal>memory</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/mental-health"/>
         <Literal xml:lang="en">Mental Health</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/mental-health"/>
-        <Literal>mental-health</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1169,19 +1173,9 @@
         <Literal xml:lang="en">Mobility</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/mobility"/>
-        <Literal>mobility</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/motor"/>
         <Literal xml:lang="en">Motor</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/motor"/>
-        <Literal>motor</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1189,19 +1183,9 @@
         <Literal xml:lang="en">Physical &amp; Sensory Intersections</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/physical-sensory-intersections"/>
-        <Literal>physical-sensory-intersections</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/sensory-intersections"/>
         <Literal xml:lang="en">Sensory Intersections</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/sensory-intersections"/>
-        <Literal>sensory-intersections</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1209,19 +1193,9 @@
         <Literal xml:lang="en">Speech</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/speech"/>
-        <Literal>speech</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/vision-visual"/>
         <Literal xml:lang="en">Vision &amp; Visual</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-abilities/vision-visual"/>
-        <Literal>vision-visual</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1229,19 +1203,9 @@
         <Literal xml:lang="en">Users can adjust for content orientation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/adjust-content-orientation"/>
-        <Literal>adjust-content-orientation</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/adjust-duration"/>
         <Literal xml:lang="en">Users can adjust for duration requirements</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/adjust-duration"/>
-        <Literal>adjust-duration</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1249,19 +1213,9 @@
         <Literal xml:lang="en">Users can adjust for orientation in space</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/adjust-spatial-orientation"/>
-        <Literal>adjust-spatial-orientation</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/aware-alerts"/>
         <Literal xml:lang="en">Users are aware of alerts</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/aware-alerts"/>
-        <Literal>aware-alerts</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1269,19 +1223,9 @@
         <Literal xml:lang="en">Users can control interruptions</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/control-interruptions"/>
-        <Literal>control-interruptions</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/customize-content"/>
         <Literal xml:lang="en">Users can customize content</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/customize-content"/>
-        <Literal>customize-content</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1289,19 +1233,9 @@
         <Literal xml:lang="en">Users can customize context</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/customize-context"/>
-        <Literal>customize-context</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/customize-settings"/>
         <Literal xml:lang="en">Users can customize settings</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/customize-settings"/>
-        <Literal>customize-settings</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1309,19 +1243,9 @@
         <Literal xml:lang="en">Users can discover new content</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/discover-content"/>
-        <Literal>discover-content</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/discover-context"/>
         <Literal xml:lang="en">Users can discover new context</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/discover-context"/>
-        <Literal>discover-context</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1329,19 +1253,9 @@
         <Literal xml:lang="en">Users can recover from errors</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/error-recover"/>
-        <Literal>error-recover</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/errors-avoid"/>
         <Literal xml:lang="en">Users can avoid errors</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/errors-avoid"/>
-        <Literal>errors-avoid</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1349,19 +1263,9 @@
         <Literal xml:lang="en">Users can find help for content</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/find-content-help"/>
-        <Literal>find-content-help</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/find-error-help"/>
         <Literal xml:lang="en">Users can find help for errors</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/find-error-help"/>
-        <Literal>find-error-help</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1369,19 +1273,9 @@
         <Literal xml:lang="en">Users can find help for interaction</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/find-interaction-help"/>
-        <Literal>find-interaction-help</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/harm-neurological"/>
         <Literal xml:lang="en">Users are not harmed neurologically</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/harm-neurological"/>
-        <Literal>harm-neurological</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1389,19 +1283,9 @@
         <Literal xml:lang="en">Users are not harmed physically</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/harm-physical"/>
-        <Literal>harm-physical</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/identify-content-position"/>
         <Literal xml:lang="en">Users can identify their position in content</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/identify-content-position"/>
-        <Literal>identify-content-position</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1409,19 +1293,9 @@
         <Literal xml:lang="en">Users can identify their position in context</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/identify-context-position"/>
-        <Literal>identify-context-position</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/identify-process-position"/>
         <Literal xml:lang="en">Users can identify their position in a process</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/identify-process-position"/>
-        <Literal>identify-process-position</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1429,19 +1303,9 @@
         <Literal xml:lang="en">Users can identify their position in a space</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/identify-spatial-position"/>
-        <Literal>identify-spatial-position</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/operate-content"/>
         <Literal xml:lang="en">Users can operate content</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/operate-content"/>
-        <Literal>operate-content</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1449,19 +1313,9 @@
         <Literal xml:lang="en">Users can operate controls</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/operate-controls"/>
-        <Literal>operate-controls</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/operate-navigation"/>
         <Literal xml:lang="en">Users can operate navigation</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/operate-navigation"/>
-        <Literal>operate-navigation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1469,19 +1323,9 @@
         <Literal xml:lang="en">Users can operate orientation in space</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/operate-orientation"/>
-        <Literal>operate-orientation</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/perceive-content"/>
         <Literal xml:lang="en">Users can perceive content</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/perceive-content"/>
-        <Literal>perceive-content</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1489,19 +1333,9 @@
         <Literal xml:lang="en">Users can perceive changes to content</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/perceive-content-changes"/>
-        <Literal>perceive-content-changes</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/perceive-controls"/>
         <Literal xml:lang="en">Users can perceive controls</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/perceive-controls"/>
-        <Literal>perceive-controls</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1509,19 +1343,9 @@
         <Literal xml:lang="en">Users can perceive changes to controls</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/perceive-controls-changes"/>
-        <Literal>perceive-controls-changes</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/perceive-structure"/>
         <Literal xml:lang="en">Users can perceive semantic structure</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/perceive-structure"/>
-        <Literal>perceive-structure</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1529,19 +1353,9 @@
         <Literal xml:lang="en">Users can spatially orient in augmented environments</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-augmented"/>
-        <Literal>spatially-orient-augmented</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-immersive"/>
         <Literal xml:lang="en">Users can spatially orient in immersive environments</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/spatially-orient-immersive"/>
-        <Literal>spatially-orient-immersive</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1549,19 +1363,9 @@
         <Literal xml:lang="en">Users can understand content</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/understand-content"/>
-        <Literal>understand-content</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/understand-content-changes"/>
         <Literal xml:lang="en">Users can understand changes to content</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/understand-content-changes"/>
-        <Literal>understand-content-changes</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1569,19 +1373,9 @@
         <Literal xml:lang="en">Users can understand controls</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/understand-controls"/>
-        <Literal>understand-controls</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-needs/understand-navigation"/>
         <Literal xml:lang="en">Users can understand navigation</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/understand-navigation"/>
-        <Literal>understand-navigation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1589,14 +1383,44 @@
         <Literal xml:lang="en">Users can understand structure</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
-        <NamedIndividual IRI="/guidelines/functional-needs/understand-structure"/>
-        <Literal>understand-structure</Literal>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/captions"/>
+        <Literal xml:lang="en">Captions</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/descriptionAt"/>
-        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/WAI/GL/WCAG3/2022/how-tos/text-alternatives/</Literal>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/captions"/>
+        <Literal xml:lang="en">Provide captions and associated metadata for audio content.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/clear-words"/>
+        <Literal xml:lang="en">Clear words</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/clear-words"/>
+        <Literal xml:lang="en">Use common clear words.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/error-prevention"/>
+        <Literal xml:lang="en">Error prevention</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/error-prevention"/>
+        <Literal xml:lang="en">Provide features that help users avoid errors.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+        <Literal xml:lang="en">Structured content</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+        <Literal xml:lang="en">Use sections, headings, and sub-headings to organize content.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1604,9 +1428,9 @@
         <Literal xml:lang="en">Text alternatives</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
+        <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
-        <Literal>text-alternatives</Literal>
+        <Literal xml:lang="fr">équivalents textuels</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/name"/>
@@ -1614,9 +1438,19 @@
         <Literal xml:lang="en">Provide text alternative for non-text content.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/descriptionAt"/>
-        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/WAI/GL/WCAG3/2022/outcomes/text-alternative-available</Literal>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/text-alternatives"/>
+        <Literal xml:lang="fr">proposer des équivalents textuels à tout contenu non textuel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/visual-contrast-of-text"/>
+        <Literal xml:lang="en">Provide sufficient contrast between foreground text and its background.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/guidelines/wcag3-guidelines/visual-contrast-of-text"/>
+        <Literal xml:lang="en">Visual contrast of text</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
@@ -1624,9 +1458,14 @@
         <Literal xml:lang="en">Text alternative available</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/id"/>
+        <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
-        <Literal>text-alternative-available</Literal>
+        <Literal xml:lang="fr">Équivalents textuels disponibles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/guidelines/wcag3-outcomes/text-alternative-available"/>
+        <Literal xml:lang="fr">Fournit des alternatifs textuels pour le contenu non textuel pour les agents utilisateurs et les technologies d&apos;assistance. Cela permet aux utilisateurs incapables de percevoir et / ou de comprendre le contenu non textuel de déterminer sa signification.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/name"/>
@@ -1787,15 +1626,7 @@
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
-        <DataProperty IRI="/model/property/descriptionAt"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="/model/property/handle"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="/model/property/id"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1818,14 +1649,6 @@
         <DataProperty IRI="/model/property/version"/>
         <Class IRI="/model/class/GuidelineSpecification"/>
     </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="/model/property/descriptionAt"/>
-        <Datatype abbreviatedIRI="xsd:anyURI"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/model/property/id"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/model/property/number"/>
         <Datatype abbreviatedIRI="owl:rational"/>
