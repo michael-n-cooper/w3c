@@ -1677,7 +1677,71 @@
         <IRI>/model/class/WCAG3MaturityLevel</IRI>
         <Literal>https://www.w3.org/WAI/GL/wiki/AG_process</Literal>
     </AnnotationAssertion>
-</Ontology>
+	<Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/common-clear-words"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/common-clear-words"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/common-clear-words"/><Literal xml:lang="en">Common clear words</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/common-clear-words"/><Literal xml:lang="en">Uses common words to reduce confusion and improve understanding.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/common-clear-words"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/clear-words"/>
+	</ObjectPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/translates-speech-and-non-speech-audio"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/translates-speech-and-non-speech-audio"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/translates-speech-and-non-speech-audio"/><Literal xml:lang="en">Translates speech and non-speech audio</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/translates-speech-and-non-speech-audio"/><Literal xml:lang="en">Translates speech and non-speech audio into alternative formats (e.g. captions) so media can be understood when sound is unavailable or limited. User agents and APIs support the display and control of captions.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/translates-speech-and-non-speech-audio"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/captions"/>
+	</ObjectPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-information-about-the-sound"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-information-about-the-sound"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-information-about-the-sound"/><Literal xml:lang="en">Conveys information about the sound</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-information-about-the-sound"/><Literal xml:lang="en">Conveys information about the sound in addition to the text of the sound (for example, sound source, duration, and direction) so users know the necessary information about the context of the sound in relation to the environment it is situated in.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-information-about-the-sound"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/captions"/>
+	</ObjectPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/headings-organize-content"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/headings-organize-content"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/headings-organize-content"/><Literal xml:lang="en">Headings organize content</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/headings-organize-content"/><Literal xml:lang="en">Organizes content into logical blocks with headings relevant to the subsequent content. This makes locating and navigating information easier and faster.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/headings-organize-content"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+	</ObjectPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/uses-visually-distinct-headings"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/uses-visually-distinct-headings"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/uses-visually-distinct-headings"/><Literal xml:lang="en">Uses visually distinct headings</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/uses-visually-distinct-headings"/><Literal xml:lang="en">Uses visually distinct headings so sighted readers can determine the structure.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/uses-visually-distinct-headings"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+	</ObjectPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-hierarchy-with-semantic-structure"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-hierarchy-with-semantic-structure"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-hierarchy-with-semantic-structure"/><Literal xml:lang="en">Conveys hierarchy with semantic structure</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-hierarchy-with-semantic-structure"/><Literal xml:lang="en">Provides semantic structure that conveys the hierarchy to help explore and navigate the content.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/conveys-hierarchy-with-semantic-structure"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
+	</ObjectPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/luminance-contrast-between-background-and-text"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/luminance-contrast-between-background-and-text"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/luminance-contrast-between-background-and-text"/><Literal xml:lang="en">Luminance contrast between background and text</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/luminance-contrast-between-background-and-text"/><Literal xml:lang="en">Provides adequate luminance contrast between background and text colors to make the text easy to read.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/luminance-contrast-between-background-and-text"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/visual-contrast-of-text"/>
+	</ObjectPropertyAssertion><Declaration><NamedIndividual IRI="/guidelines/wcag3-outcomes/input-instructions-provided"/></Declaration>
+	<ClassAssertion><Class IRI="/model/class/WCAG3Outcome"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/input-instructions-provided"/></ClassAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/handle"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/input-instructions-provided"/><Literal xml:lang="en">Input instructions provided</Literal></DataPropertyAssertion>
+	<DataPropertyAssertion><DataProperty IRI="/model/property/name"/><NamedIndividual IRI="/guidelines/wcag3-outcomes/input-instructions-provided"/><Literal xml:lang="en">Provides instructions for inputs that have data entry requirements (for example, required, date, password) so users know how to provide valid information.</Literal></DataPropertyAssertion>
+	<ObjectPropertyAssertion>
+		<ObjectProperty IRI="/model/relation/supports"/>
+		<NamedIndividual IRI="/guidelines/wcag3-outcomes/input-instructions-provided"/>
+		<NamedIndividual IRI="/guidelines/wcag3-guidelines/error-prevention"/>
+	</ObjectPropertyAssertion></Ontology>
 
 
 
