@@ -125,6 +125,9 @@
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/model/property/handle"/>
     </Declaration>
     <Declaration>
@@ -1625,6 +1628,14 @@
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/handle"/>
         <Class IRI="/model/class/GuidelineStatement"/>
@@ -1649,6 +1660,10 @@
         <DataProperty IRI="/model/property/version"/>
         <Class IRI="/model/class/GuidelineSpecification"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/model/property/number"/>
         <Datatype abbreviatedIRI="owl:rational"/>
