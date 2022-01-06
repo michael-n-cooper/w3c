@@ -56,6 +56,12 @@
         <Class IRI="/model/class/MaturityLevel"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/model/class/NamedItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/model/class/NumberedItem"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/model/class/UserNeed"/>
     </Declaration>
     <Declaration>
@@ -95,6 +101,15 @@
         <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/conformanceHigherThan"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
     </Declaration>
     <Declaration>
@@ -107,16 +122,19 @@
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/model/relation/isHigherThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/model/relation/isLowerThan"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/model/relation/isSupportedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/model/relation/isTypeOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <ObjectProperty IRI="/model/relation/maturityHigherThan"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/model/relation/supports"/>
@@ -407,19 +425,19 @@
         <NamedIndividual IRI="/guidelines/wcag3-outcomes/uses-visually-distinct-headings"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityDeveloping"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/maturity/wcag3/MaturityMaturing"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityMature"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/maturity/wcag3/MaturityPlaceholder"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="/maturity/wcag3/MaturityPolishing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/maturity/wcag3/MaturityStable"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityRefining"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/specifications/ATAG20"/>
@@ -447,8 +465,29 @@
         <Class IRI="/model/class/ConformanceLevel"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/ATAG2ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isHigherThan"/>
+            <Class IRI="/ATAG2ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ATAG2ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isLowerThan"/>
+            <Class IRI="/ATAG2ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/model/class/ATAG20Guideline"/>
         <Class IRI="/model/class/DirectiveGuidelineStatement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/ATAG20Guideline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/ATAG20Principle"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/ATAG20Part"/>
@@ -477,33 +516,19 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/model/class/ConformanceLevel"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/ConformanceLevel"/>
+        <Class IRI="/model/class/ATAG20SuccessCriterion"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-            <Class IRI="/model/class/ConformanceLevel"/>
+            <ObjectProperty IRI="/model/relation/supports"/>
+            <Class IRI="/model/class/ATAG20Guideline"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/ConformanceLevel"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <Class IRI="/model/class/ConformanceLevel"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="/model/class/NamedItem"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/DirectiveGuidelineStatement"/>
         <Class IRI="/model/class/GuidelineStatement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/DirectiveGuidelineStatement"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/supports"/>
-            <Class IRI="/model/class/ATAG20Principle"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/FunctionalAbility"/>
@@ -526,33 +551,31 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/GuidelineAudience"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="/model/class/NamedItem"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/GuidelineSpecification"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="/model/class/NamedItem"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/GuidelineStatement"/>
+        <Class IRI="/model/class/NamedItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/GuidelineStatement"/>
+        <Class IRI="/model/class/NumberedItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/MaturityLevel"/>
+        <Class IRI="/model/class/NamedItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/NamedItem"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/model/class/MaturityLevel"/>
+        <Class IRI="/model/class/NumberedItem"/>
         <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/MaturityLevel"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-            <Class IRI="/model/class/MaturityLevel"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/model/class/MaturityLevel"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <Class IRI="/model/class/MaturityLevel"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/UserNeed"/>
@@ -567,12 +590,40 @@
         <Class IRI="/model/class/ConformanceLevel"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isHigherThan"/>
+            <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isLowerThan"/>
+            <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/model/class/WCAG1Guideline"/>
         <Class IRI="/model/class/DirectiveGuidelineStatement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG2ConformanceLevel"/>
         <Class IRI="/model/class/ConformanceLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isHigherThan"/>
+            <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isLowerThan"/>
+            <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG2Guideline"/>
@@ -612,12 +663,40 @@
         <Class IRI="/model/class/ConformanceLevel"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isHigherThan"/>
+            <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isLowerThan"/>
+            <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/model/class/WCAG3Guideline"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG3MaturityLevel"/>
         <Class IRI="/model/class/MaturityLevel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isHigherThan"/>
+            <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/model/relation/isLowerThan"/>
+            <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/model/class/WCAG3Outcome"/>
@@ -648,13 +727,32 @@
         <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
         <Class IRI="/model/class/DirectiveGuidelineStatement"/>
     </SubClassOf>
-    <SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/model/class/ATAG20Guideline"/>
+        <Class IRI="/model/class/WCAG1Checkpoint"/>
+        <Class IRI="/model/class/WCAG1Guideline"/>
         <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/model/relation/supports"/>
-            <Class IRI="/model/class/ATAG20Guideline"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/model/class/ATAG20Part"/>
+        <Class IRI="/model/class/ATAG20Principle"/>
+        <Class IRI="/model/class/DirectiveGuidelineStatement"/>
+        <Class IRI="/model/class/FunctionalAbility"/>
+        <Class IRI="/model/class/FunctionalCategory"/>
+        <Class IRI="/model/class/FunctionalNeed"/>
+        <Class IRI="/model/class/UserNeed"/>
+        <Class IRI="/model/class/WCAG2Guideline"/>
+        <Class IRI="/model/class/WCAG2Principle"/>
+        <Class IRI="/model/class/WCAG3Guideline"/>
+        <Class IRI="/model/class/WCAG3Outcome"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/model/class/ConformanceLevel"/>
+        <Class IRI="/model/class/GuidelineAudience"/>
+        <Class IRI="/model/class/GuidelineSpecification"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="/model/class/FunctionalAbility"/>
         <Class IRI="/model/class/FunctionalCategory"/>
@@ -691,7 +789,7 @@
         <NamedIndividual IRI="/audiences/coder"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/model/class/DirectiveGuidelineStatement"/>
+        <Class IRI="/model/class/GuidelineAudience"/>
         <NamedIndividual IRI="/audiences/designer"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -723,21 +821,7 @@
         <NamedIndividual IRI="/conformance/wcag1/P1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <NamedIndividual IRI="/conformance/wcag1/P2"/>
-        </ObjectHasValue>
-        <NamedIndividual IRI="/conformance/wcag1/P1"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="/model/class/WCAG1ConformanceLevel"/>
-        <NamedIndividual IRI="/conformance/wcag1/P2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <NamedIndividual IRI="/conformance/wcag1/P3"/>
-        </ObjectHasValue>
         <NamedIndividual IRI="/conformance/wcag1/P2"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -749,21 +833,7 @@
         <NamedIndividual IRI="/conformance/wcag2/A"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <NamedIndividual IRI="/conformance/wcag2/AA"/>
-        </ObjectHasValue>
-        <NamedIndividual IRI="/conformance/wcag2/A"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="/model/class/WCAG2ConformanceLevel"/>
-        <NamedIndividual IRI="/conformance/wcag2/AA"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <NamedIndividual IRI="/conformance/wcag2/AAA"/>
-        </ObjectHasValue>
         <NamedIndividual IRI="/conformance/wcag2/AA"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -775,25 +845,11 @@
         <NamedIndividual IRI="/conformance/wcag3/Bronze"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <NamedIndividual IRI="/conformance/wcag3/Silver"/>
-        </ObjectHasValue>
-        <NamedIndividual IRI="/conformance/wcag3/Bronze"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="/model/class/WCAG3ConformanceLevel"/>
         <NamedIndividual IRI="/conformance/wcag3/Gold"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/WCAG3ConformanceLevel"/>
-        <NamedIndividual IRI="/conformance/wcag3/Silver"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <ObjectHasValue>
-            <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-            <NamedIndividual IRI="/conformance/wcag3/Gold"/>
-        </ObjectHasValue>
         <NamedIndividual IRI="/conformance/wcag3/Silver"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1070,11 +1126,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityDeveloping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
         <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/WCAG3MaturityLevel"/>
-        <NamedIndividual IRI="/maturity/wcag3/MaturityMaturing"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityMature"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/WCAG3MaturityLevel"/>
@@ -1082,11 +1142,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/WCAG3MaturityLevel"/>
-        <NamedIndividual IRI="/maturity/wcag3/MaturityPolishing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/model/class/WCAG3MaturityLevel"/>
-        <NamedIndividual IRI="/maturity/wcag3/MaturityStable"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityRefining"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="/model/class/GuidelineSpecification"/>
@@ -1130,6 +1186,46 @@
         <ObjectProperty IRI="/model/relation/isTypeOf"/>
         <NamedIndividual IRI="/audiences/designer"/>
         <NamedIndividual IRI="/audiences/author"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/ATAG2/A"/>
+        <NamedIndividual IRI="/conformance/wcag2/AA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
+        <NamedIndividual IRI="/conformance/wcag2/AAA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/wcag1/P1"/>
+        <NamedIndividual IRI="/conformance/wcag1/P2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/wcag1/P2"/>
+        <NamedIndividual IRI="/conformance/wcag1/P3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/wcag2/A"/>
+        <NamedIndividual IRI="/conformance/wcag2/AA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/wcag2/AA"/>
+        <NamedIndividual IRI="/conformance/wcag2/AAA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/wcag3/Bronze"/>
+        <NamedIndividual IRI="/conformance/wcag3/Silver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <NamedIndividual IRI="/conformance/wcag3/Silver"/>
+        <NamedIndividual IRI="/conformance/wcag3/Gold"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
@@ -1216,6 +1312,146 @@
         <NamedIndividual IRI="/guidelines/wcag3-outcomes/uses-visually-distinct-headings"/>
         <NamedIndividual IRI="/guidelines/wcag3-guidelines/structured-content"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityDeveloping"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityRefining"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityDeveloping"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityPlaceholder"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityRefining"/>
+        <NamedIndividual IRI="/maturity/wcag3/MaturityMature"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/ATAG2/A"/>
+        <Literal xml:lang="en">A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/ATAG2/A"/>
+        <Literal xml:lang="en">A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
+        <Literal xml:lang="en">AA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
+        <Literal xml:lang="en">AA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/ATAG2/AAA"/>
+        <Literal xml:lang="en">AAA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/ATAG2/AAA"/>
+        <Literal xml:lang="en">AAA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag1/P1"/>
+        <Literal xml:lang="en">P1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag1/P1"/>
+        <Literal xml:lang="en">Priority 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag1/P2"/>
+        <Literal xml:lang="en">P2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag1/P2"/>
+        <Literal xml:lang="en">Priority 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag1/P3"/>
+        <Literal xml:lang="en">P3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag1/P3"/>
+        <Literal xml:lang="en">Priority 3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag2/A"/>
+        <Literal xml:lang="en">A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag2/A"/>
+        <Literal xml:lang="en">A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag2/AA"/>
+        <Literal xml:lang="en">AA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag2/AA"/>
+        <Literal xml:lang="en">AA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag2/AAA"/>
+        <Literal xml:lang="en">AAA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag2/AAA"/>
+        <Literal xml:lang="en">AAA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag3/Bronze"/>
+        <Literal xml:lang="en">Bronze</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag3/Bronze"/>
+        <Literal xml:lang="en">Bronze</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag3/Gold"/>
+        <Literal xml:lang="en">Gold</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag3/Gold"/>
+        <Literal xml:lang="en">Gold</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/handle"/>
+        <NamedIndividual IRI="/conformance/wcag3/Silver"/>
+        <Literal xml:lang="en">Silver</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/model/property/name"/>
+        <NamedIndividual IRI="/conformance/wcag3/Silver"/>
+        <Literal xml:lang="en">Silver</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/guidelines/functional-abilities/attention"/>
@@ -1652,6 +1888,18 @@
         <Literal xml:lang="en">Uses visually distinct headings so sighted readers can determine the structure.</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <ObjectProperty IRI="/model/relation/isLowerThan"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <ObjectProperty IRI="/model/relation/isLowerThan"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/conformanceHigherThan"/>
+        <ObjectProperty IRI="/model/relation/isHigherThan"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1668,6 +1916,14 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/isHigherThan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/model/relation/isLowerThan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/isSupportedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1676,12 +1932,8 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="/model/relation/maturityHigherThan"/>
+        <ObjectProperty IRI="/model/relation/isHigherThan"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/model/relation/supports"/>
@@ -1691,27 +1943,62 @@
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <ObjectProperty IRI="/model/relation/conformanceHigherThan"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <ObjectProperty IRI="/model/relation/maturityHigherThan"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="/model/relation/guidelineUsedIn"/>
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="/model/relation/isSupportedBy"/>
-        <ObjectProperty IRI="/model/relation/supports"/>
+        <ObjectProperty IRI="/model/relation/isHigherThan"/>
+        <ObjectProperty IRI="/model/relation/isLowerThan"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <ObjectProperty IRI="/model/relation/isSupportedBy"/>
+        <ObjectProperty IRI="/model/relation/supports"/>
     </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/model/relation/conformanceHigherThan"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/model/relation/isHigherThan"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="/model/relation/isLowerThan"/>
+    </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="/model/relation/isSupportedBy"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <ObjectProperty IRI="/model/relation/maturityHigherThan"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="/model/relation/supports"/>
     </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/model/relation/conformanceHigherThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
         <Class IRI="/model/classes/ConformanceGuidelineStatement"/>
@@ -1737,19 +2024,7 @@
         <Class IRI="/model/class/GuidelineAudience"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-        <Class IRI="/model/class/ConformanceLevel"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-        <Class IRI="/model/class/MaturityLevel"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-        <Class IRI="/model/class/ConformanceLevel"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <ObjectProperty IRI="/model/relation/maturityHigherThan"/>
         <Class IRI="/model/class/MaturityLevel"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1760,6 +2035,18 @@
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
         <Class IRI="/model/class/GuidelineSpecification"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="//model/relation/maturityLowerThan"/>
+        <Class IRI="/model/class/MaturityLevel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/model/relation/conformanceHigherThan"/>
+        <Class IRI="/model/class/ConformanceLevel"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/model/relation/conformanceLevel"/>
         <Class IRI="/model/class/ConformanceLevel"/>
@@ -1781,19 +2068,7 @@
         <Class IRI="/model/class/GuidelineAudience"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-        <Class IRI="/model/class/ConformanceLevel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/model/relation/levelHigherThan"/>
-        <Class IRI="/model/class/MaturityLevel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
-        <Class IRI="/model/class/ConformanceLevel"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="/model/relation/levelLowerThan"/>
+        <ObjectProperty IRI="/model/relation/maturityHigherThan"/>
         <Class IRI="/model/class/MaturityLevel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1814,15 +2089,15 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/handle"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
+        <Class IRI="/model/class/NamedItem"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/name"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
+        <Class IRI="/model/class/NamedItem"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/number"/>
-        <Class IRI="/model/class/GuidelineStatement"/>
+        <Class IRI="/model/class/NumberedItem"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/model/property/shortname"/>
