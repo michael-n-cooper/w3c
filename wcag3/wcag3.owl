@@ -143,7 +143,10 @@
         <ObjectProperty IRI="/model/relation/usesGuideline"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+        <DataProperty IRI="/model/property/canonicalContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/draftContent"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/handle"/>
@@ -153,6 +156,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/relatedReference"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/model/property/researchReference"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/model/property/shortname"/>
@@ -183,15 +192,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/audiences/user-agent"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/conformance/ATAG2/A"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="/conformance/ATAG2/AAA"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="/conformance/wcag1/P1"/>
@@ -460,6 +460,40 @@
     <Declaration>
         <NamedIndividual IRI="/specifications/WCAG30"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="/model/class/WCAG1ConformanceLevel"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="/conformance/wcag1/P1"/>
+            <NamedIndividual IRI="/conformance/wcag1/P2"/>
+            <NamedIndividual IRI="/conformance/wcag1/P3"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/model/class/WCAG2ConformanceLevel"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="/conformance/wcag2/A"/>
+            <NamedIndividual IRI="/conformance/wcag2/AA"/>
+            <NamedIndividual IRI="/conformance/wcag2/AAA"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/model/class/WCAG3ConformanceLevel"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="/conformance/wcag3/Bronze"/>
+            <NamedIndividual IRI="/conformance/wcag3/Gold"/>
+            <NamedIndividual IRI="/conformance/wcag3/Silver"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/model/class/WCAG3MaturityLevel"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="/maturity/wcag3/MaturityDeveloping"/>
+            <NamedIndividual IRI="/maturity/wcag3/MaturityExploratory"/>
+            <NamedIndividual IRI="/maturity/wcag3/MaturityMature"/>
+            <NamedIndividual IRI="/maturity/wcag3/MaturityPlaceholder"/>
+            <NamedIndividual IRI="/maturity/wcag3/MaturityRefining"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="/ATAG2ConformanceLevel"/>
         <Class IRI="/model/class/ConformanceLevel"/>
@@ -805,18 +839,6 @@
         <NamedIndividual IRI="/audiences/user-agent"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="/ATAG2ConformanceLevel"/>
-        <NamedIndividual IRI="/conformance/ATAG2/A"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/ATAG2ConformanceLevel"/>
-        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="/ATAG2ConformanceLevel"/>
-        <NamedIndividual IRI="/conformance/ATAG2/AAA"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="/model/class/WCAG1ConformanceLevel"/>
         <NamedIndividual IRI="/conformance/wcag1/P1"/>
     </ClassAssertion>
@@ -1189,16 +1211,6 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
-        <NamedIndividual IRI="/conformance/ATAG2/A"/>
-        <NamedIndividual IRI="/conformance/wcag2/AA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
-        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
-        <NamedIndividual IRI="/conformance/wcag2/AAA"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="//model/relation/conformanceLowerThan"/>
         <NamedIndividual IRI="/conformance/wcag1/P1"/>
         <NamedIndividual IRI="/conformance/wcag1/P2"/>
     </ObjectPropertyAssertion>
@@ -1332,36 +1344,6 @@
         <NamedIndividual IRI="/maturity/wcag3/MaturityRefining"/>
         <NamedIndividual IRI="/maturity/wcag3/MaturityMature"/>
     </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/handle"/>
-        <NamedIndividual IRI="/conformance/ATAG2/A"/>
-        <Literal xml:lang="en">A</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/name"/>
-        <NamedIndividual IRI="/conformance/ATAG2/A"/>
-        <Literal xml:lang="en">A</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/handle"/>
-        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
-        <Literal xml:lang="en">AA</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/name"/>
-        <NamedIndividual IRI="/conformance/ATAG2/AA"/>
-        <Literal xml:lang="en">AA</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/handle"/>
-        <NamedIndividual IRI="/conformance/ATAG2/AAA"/>
-        <Literal xml:lang="en">AAA</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="/model/property/name"/>
-        <NamedIndividual IRI="/conformance/ATAG2/AAA"/>
-        <Literal xml:lang="en">AAA</Literal>
-    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="/model/property/handle"/>
         <NamedIndividual IRI="/conformance/wcag1/P1"/>
@@ -2080,11 +2062,27 @@
         <Class IRI="/model/class/GuidelineStatement"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+        <DataProperty IRI="/model/property/canonicalContent"/>
+        <DataProperty IRI="/model/property/relatedReference"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/draftContent"/>
+        <DataProperty IRI="/model/property/relatedReference"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/relatedReference"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/model/property/researchReference"/>
+        <DataProperty IRI="/model/property/relatedReference"/>
+    </SubDataPropertyOf>
     <DataPropertyDomain>
-        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+        <DataProperty IRI="/model/property/canonicalContent"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/model/property/draftContent"/>
         <Class IRI="/model/class/GuidelineStatement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -2100,6 +2098,10 @@
         <Class IRI="/model/class/NumberedItem"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="/model/property/researchReference"/>
+        <Class IRI="/model/class/GuidelineStatement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="/model/property/shortname"/>
         <Class IRI="/model/class/GuidelineSpecification"/>
     </DataPropertyDomain>
@@ -2112,12 +2114,24 @@
         <Class IRI="/model/class/GuidelineSpecification"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="/model/property/draftMaterialsLocation"/>
+        <DataProperty IRI="/model/property/canonicalContent"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/draftContent"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/model/property/number"/>
         <Datatype abbreviatedIRI="owl:rational"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/relatedReference"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/model/property/researchReference"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/model/property/version"/>
